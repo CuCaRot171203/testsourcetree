@@ -35,7 +35,6 @@ namespace BepKhoiBackend.BusinessObject.Services.UserService.CashierService
         public CashierDTO GetCashierById(int id)
         {
             var cashier = _cashierRepository.GetCashierById(id);
-            var alt = 11;
             if (cashier == null || cashier.UserInformation == null)
             {
                 return null;
