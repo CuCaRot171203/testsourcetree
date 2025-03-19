@@ -35,7 +35,11 @@ namespace BepKhoiBackend.BusinessObject.Services.UserService.CashierService
         public CashierDTO GetCashierById(int id)
         {
             var cashier = _cashierRepository.GetCashierById(id);
-            if (cashier == null || cashier.UserInformation == null) return null; // Kiểm tra null
+            var alt = 11;
+            if (cashier == null || cashier.UserInformation == null)
+            {
+                return null;
+            }; // Kiểm tra null
 
             return new CashierDTO
             {
